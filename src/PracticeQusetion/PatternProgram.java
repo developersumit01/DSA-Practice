@@ -4,16 +4,10 @@ public class PatternProgram {
 
 	public static void main(String[] args) {
 		PatternProgram pP = new PatternProgram();
-		pP.ZPattern(7);
+		pP.ButterflyPattern(7);
 	}
 
 	public void pyramidPattern(int row) {
-		/*
-		        *
-		       ***
-		      *****
-		     *******
-		 */
 		for (int i = 1; i <= row; i++) {
 //			This for loop is use to print the spaces before stars.
 			for (int space = row; space > i; space--) {
@@ -29,11 +23,6 @@ public class PatternProgram {
 	}
 
 	public void leftAngleTriangle(int row) {
-		/*
-		        *
-		        **
-		        ***
-		 */
 		for (int i = 1; i <= row; i++) {
 			for (int j = 0; j < i; j++) {
 				System.out.print("*");
@@ -43,11 +32,6 @@ public class PatternProgram {
 	}
 
 	public void rightAngleTriangle(int row) {
-		/*
-			    *
-			   **
-			  ***
-		 */
 		for (int i = 1; i <= row; i++) {
 //				This for loop is use to print the spaces before stars.
 			for (int space = row; space > i; space--) {
@@ -61,11 +45,6 @@ public class PatternProgram {
 	}
 
 	public void squarePattern(int row, int column) {
-		/*
-		     ****
-		     ****
-		     ****
-		 */
 		for (int i = 0; i < row; i++) {
 			for (int j = 0; j < column; j++) {
 				System.out.print("*");
@@ -76,12 +55,6 @@ public class PatternProgram {
 	}
 
 	public void reversePyramid(int row) {
-
-		/*
-		     *****
-		      ***
-		       *
-		*/
 		for (int i = row; i >= 1; i--) {
 //	This for loop is use to print the spaces before stars.
 			for (int space = i - 1; space < row; space++) {
@@ -100,11 +73,6 @@ public class PatternProgram {
 	}
 
 	public void hollowSquare(int row, int column) {
-		/*
-		 ****
-		 * *
-		 ****
-		 */
 		for (int i = 0; i < row; i++) {
 			for (int j = 0; j < column; j++) {
 				if (i == 0 || j == 0 || i == row - 1 || j == column - 1) {
@@ -118,10 +86,6 @@ public class PatternProgram {
 	}
 
 	public void pascalTriangle(int row) {
-		/*
-		 * 1 1 1 1 2 1 1 3 3 1 1 4 6 4 1
-		 * 
-		 */
 		for (int i = 0; i <= row; i++) {
 //			This for loop is use to print the spaces before stars.
 			for (int j = 0; j <= row - i; j++) {
@@ -144,13 +108,6 @@ public class PatternProgram {
 	}
 
 	public void diamondPattern(int row) {
-		/*
-				   *
-				  ***
-				 *****
-				  ***
-				   *
-		*/
 //		This loop is use to print the upper triangle.
 		for (int i = 1; i <= row; i++) {
 			for (int space = row; space > i; space--) {
@@ -174,12 +131,6 @@ public class PatternProgram {
 	}
 
 	public void palindromePattern(int row) {
-
-		/*
-		 * 
-		 * 1 121 12321 1234321
-		 * 
-		 */
 		for (int i = 1; i <= row; i++) {
 			for (int space = row; space > i; space--) {
 				System.out.print(" ");
@@ -199,12 +150,6 @@ public class PatternProgram {
 	}
 
 	public void hollowPyramidPattern(int row) {
-		/*
-		 *
-		 * * *
-		 *******
-		 */
-
 		for (int i = 1; i <= row; i++) {
 			for (int space = row; space > i; space--) {
 				System.out.print(" ");
@@ -221,14 +166,6 @@ public class PatternProgram {
 	}
 
 	public void ZPattern(int row) {
-
-		/*
-		   			*****
-					   *   
-					  *    
-					 *     
-					*****
-		 */
 
 		for (int i = 1; i <= row; i++) {
 			for (int space = row; space > i; space--) {
@@ -248,5 +185,33 @@ public class PatternProgram {
 			System.out.println();
 		}
 	}
+	
+	private void ButterflyPattern(int n) {
+		int space=2*n-1;
+		int start=1;
+		for(int i=1;i<=2*n-1;i++) {
+			
+			for(int j=1;j<=start;j++) {
+				System.out.print("*");
+			}
+			for(int k=1;k<=space-1;k++) {
+				System.out.print(" ");
+			}
+			for(int l=1;l<=start;l++) {
+				System.out.print("*");
+			}
+			if(i/n>0) {
+				space=space+2;
+				start--;
+			}else {
+				space=space-2;
+				start++;
+			}
+//			space=space-2;
+			System.out.println();
+		}
+	}
+	
+
 
 }
