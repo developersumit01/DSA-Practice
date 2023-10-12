@@ -186,7 +186,7 @@ public class PatternProgram {
 		}
 	}
 	
-	private void ButterflyPattern(int n) {
+	public void ButterflyPattern(int n) {
 		int space=2*n-1;
 		int start=1;
 		for(int i=1;i<=2*n-1;i++) {
