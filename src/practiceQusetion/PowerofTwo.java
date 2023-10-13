@@ -1,4 +1,4 @@
-package PracticeQusetion;
+package practiceQusetion;
 
 import java.util.Scanner;
 

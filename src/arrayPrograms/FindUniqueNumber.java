@@ -1,12 +1,6 @@
-package ArrayPrograms;
+package arrayPrograms;
 
 public class FindUniqueNumber {
-	public static void main(String[] args) {
-		FindUniqueNumber obj = new FindUniqueNumber();
-		int arr[] = { 2, 4, 3, 4, 3, 5, 2, 3, 4, 2, 5, 6, 5 };
-		System.out.println("The unique Number is : " + obj.uniqueFromArrayOfAnyRepetition(arr, 3));
-	}
-
 //	This method is use to find the unique number form an array which have double number and at least one unique number.
 	public int uniqueFromArray(int[] arr) {
 		int unique = 0;

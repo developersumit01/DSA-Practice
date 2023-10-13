@@ -1,4 +1,4 @@
-package PracticeQusetion;
+package practiceQusetion;
 
 public class HelloWorld {
 	public static void main(String[] args) {
