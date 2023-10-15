@@ -3,11 +3,6 @@ package recursion;
 import java.util.ArrayList;
 
 public class FindTarget {
-	public static void main(String[] args) {
-		FindTarget findTarget=new FindTarget();
-		int[] arr= {1,2,4,5,6,7,8,9};
-		System.out.println(findTarget.checkShorted(arr));
-	}
 //	This is the program of Linear Search.
 	public int linearSearch(int[] arr,int target) {
 		return helperForlinearSearch(arr, target, 0);
