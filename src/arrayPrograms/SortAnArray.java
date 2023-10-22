@@ -1,15 +1,8 @@
 package arrayPrograms;
 
-import java.util.Arrays;
 
 public class SortAnArray {
 	
-	public static void main(String[] args) {
-		SortAnArray anArray=new SortAnArray();
-		int[] arr= {2,4,6,8,0};
-		anArray.sortParityArray(arr);
-		System.out.println(Arrays.toString(arr));
-	}
 	/*
 	 * This method is use to sort an given array which containing only 0 or 1.
 	 */
@@ -55,6 +48,26 @@ public class SortAnArray {
 				end--;
 			}
 		}
+	}
+	/*
+	 * This method is return an array of square of each number sorted in non-decreasing
+	 * order.
+	 * Note: The given array should be in non-decreasing order.
+	 */
+	public int[] makeSortedSquardedArray(int[] arr) {
+		int start=0,end=arr.length-1;
+		int k=arr.length;
+		int[] ans=new int[arr.length];
+		while(start<=end) {
+			if(Math.abs(arr[start])>Math.abs(arr[end])) {
+				ans[--k]=arr[start]*arr[start];
+				start++;
+			}else {
+				ans[--k]=arr[end]*arr[end];
+				end--;
+			}
+		}
+		return ans;
 	}
 	
 }
